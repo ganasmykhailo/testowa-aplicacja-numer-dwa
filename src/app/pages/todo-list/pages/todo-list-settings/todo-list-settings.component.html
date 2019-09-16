@@ -1,0 +1,15 @@
+<div class="settings-page">
+  <div class="todo-list" *ngIf="todoList">
+    <app-todo-item
+      *ngFor="let item of todoList"
+      [item]="item"
+      (changedStatus)="statusChange($event)"
+      (itemRemove)="removeItem($event)"
+      (itemEdit)="editItem($event)"
+    ></app-todo-item>
+  </div>
+
+  <app-todo-list-form [todoItem]="editTodoItem"></app-todo-list-form>
+
+  <a [routerLink]="'/'" class="back-button">Go home</a>
+</div>

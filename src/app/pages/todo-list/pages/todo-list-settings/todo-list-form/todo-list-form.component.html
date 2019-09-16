@@ -1,0 +1,6 @@
+<form [formGroup]="form" (ngSubmit)="saveItem()" class="todo-list-form">
+  <input type="text" formControlName="title" name="title">
+  <input type="text" formControlName="description" name="title">
+  <input type="date" formControlName="date" name="date" value="date">
+  <button type="submit" [disabled]="!form.valid">Save Item</button>
+</form>

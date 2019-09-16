@@ -1,0 +1,16 @@
+<div class="page-wrap">
+  <h1>TO DO LIST</h1>
+
+  <div class="todo-list" *ngIf="todoList">
+    <app-todo-item
+      *ngFor="let item of todoList"
+      [item]="item"
+      (changedStatus)="changeStatus($event)"
+      (itemEdit)="editItem($event)"
+    ></app-todo-item>
+  </div>
+
+  <button class="add" [routerLink]="'/settings'">
+    ADD NEW ITEM
+  </button>
+</div>

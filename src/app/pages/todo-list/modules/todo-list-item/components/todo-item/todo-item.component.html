@@ -1,0 +1,40 @@
+<div class="todo-item" *ngIf="item">
+  <ul>
+    <li>
+      Number:
+      <span>{{item.id}}</span>
+    </li>
+    <li>
+      Title:
+      <span>{{item.title}}</span>
+    </li>
+    <li>
+      Description:
+      <span>{{item.description}}</span>
+    </li>
+    <li>
+      Date:
+      <span>{{item.date}}</span>
+    </li>
+    <li>
+      Status:
+      <span *ngIf="item.status === todoListStatus.done" class="c-green">Done</span>
+      <span *ngIf="item.status === todoListStatus.awaiting" class="c-red">Awaiting</span>
+    </li>
+    <li>
+      <button (click)="editItem(item.id)">
+        edit
+      </button>
+    </li>
+    <li>
+      <button (click)="removeItem(item.id)">
+        remove
+      </button>
+    </li>
+    <li>
+      <button (click)="changeStatus(item.id, item.status)">
+        change status
+      </button>
+    </li>
+  </ul>
+</div>

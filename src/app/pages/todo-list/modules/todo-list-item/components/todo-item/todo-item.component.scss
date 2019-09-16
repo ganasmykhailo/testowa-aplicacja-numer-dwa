@@ -1,0 +1,53 @@
+.todo-item {
+  position: relative;
+  width: 100%;
+  border: 1px solid #723412;
+  background-color: #333;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  padding: 20px;
+}
+
+p{
+  font-size: 24px;
+  color: black;
+  font-style: italic;
+}
+
+ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+
+  li{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    border-right: 1px dotted #fff;
+
+    &:last-of-type{
+      border-right: none;
+    }
+
+    span{
+      margin-top: 15px;
+      font-size: 14px;
+    }
+  }
+}
+
+
+.c-red{
+  color: red;
+}
+
+.c-green{
+  color: green;
+}

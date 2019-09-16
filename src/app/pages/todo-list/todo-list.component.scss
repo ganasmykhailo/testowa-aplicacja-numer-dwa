@@ -1,0 +1,22 @@
+:host {
+  .page-wrap {
+    padding: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    h1 {
+      color: #000;
+    }
+
+    button {
+      &.add {
+        margin: 80px 0;
+        background-color: darkslategrey;
+        color: aliceblue;
+        padding: 15px 30px;
+        border-radius: 5px;
+        border: 1px solid aliceblue;
+        cursor: pointer;
+      }
+    }
+  }
+}
